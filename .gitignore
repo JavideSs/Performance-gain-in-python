@@ -1,0 +1,6 @@
+__pycache__
+build
+
+timsort_cython.c
+timsort_cython.cp37-win32.pyd
+timsort_cpp.cp37-win32.pyd
