@@ -65,19 +65,19 @@ for implementation in implementations:
     print(implementation, end="\t\t" if len(implementation)<8 else "\t")
 print("\n"+"-"*16*(len(implementations)+2))
 
-print("Nº times faster average", end="\t|\t")
+print("Nº times faster mean", end="\t|\t")
 
 for implementation in implementations:
-    time_faster_acc = 0
-    n_time_faster_undefined = 0
+    times_faster_acc = 0
+    n_times_faster_undefined = 0
     for i, timet_python in enumerate(implementations["python"][1]):
         timet_implementation = implementations[implementation][1][i]
 
         if timet_implementation != 0:
-            time_faster_acc += timet_python / timet_implementation
-            n_time_faster_undefined+=1
+            times_faster_acc += timet_python / timet_implementation
+            n_times_faster_undefined+=1
 
-    time_faster_average = time_faster_acc / n_time_faster_undefined
-    print("{:.3f}".format(time_faster_average), end="\t\t" if time_faster_average<1000 else "\t")
+    times_faster_mean = times_faster_acc / n_times_faster_undefined
+    print("{:.3f}".format(times_faster_mean), end="\t\t" if times_faster_mean<1000 else "\t")
 
 print("\n")
