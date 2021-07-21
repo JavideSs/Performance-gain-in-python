@@ -41,7 +41,7 @@ for i in range(10,22):
     arr = list(range(arr_len))
     random.shuffle(arr)
 
-    print(arr_len, end="\t|\t")
+    print(arr_len, end="\t|\t", flush=True)
 
     for implementation in implementations:
         implementation_func = implementations[implementation][0]
@@ -53,7 +53,7 @@ for i in range(10,22):
 
         timet_ms = timet*1000
         implementations[implementation][1].append(timet_ms)
-        print("{:.3f}".format(timet_ms), end="\t\t" if timet_ms<1000 else "\t")
+        print("{:.3f}".format(timet_ms), end="\t\t" if timet_ms<1000 else "\t", flush=True)
 
     print()
 
